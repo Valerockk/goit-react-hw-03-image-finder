@@ -11,7 +11,6 @@ class Modal extends Component {
   }
 
   handleKey = (e) => {
-    console.log(e.code);
     if (e.code !== "Escape") return;
     this.props.closeModal();
   };
@@ -24,7 +23,11 @@ class Modal extends Component {
           {!activeModalImg ? (
             <span>Sorry, but large image not found</span>
           ) : (
-            <img src={activeModalImg} alt={activeModalImg} className={styles.ModalImg}/>
+            <img
+              src={activeModalImg}
+              alt={activeModalImg}
+              className={styles.ModalImg}
+            />
           )}
         </div>
       </div>
